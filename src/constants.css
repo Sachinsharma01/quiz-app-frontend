@@ -1,0 +1,11 @@
+:root {
+    --bg-primary: #570a57;
+    --text-color: #fff;
+    --header-background: #2E0249;
+    --card-background: #2E0249;
+    --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --input-background: #eee;
+    --input-border: 1.7px solid #f053be;
+    --buttosdcvn-background: #f806cc;
+    --info: #adff2f;
+}

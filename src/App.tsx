@@ -1,19 +1,21 @@
-import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css"
-import Button from 'react-bootstrap/Button';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Switch, Route } from "react-router-dom";
+import "./App.css";
+import Header from "./quiz/components/header";
+import Profile from "./quiz/pages/profile";
 
 function App() {
-    return (
-        <div className="App he d-flex justify-content-center align-items-center">
-            <div className="main">
-                <Button className="bg-primary">
-                    Click me!
-                </Button>
-            </div>
-        </div>
-    );
+  return (
+    <>
+      <Header />
+      <Switch>
+        <Route path="/user/profile" exact>
+          <Profile />
+        </Route>
+      </Switch>
+    </>
+  );
 }
 
 export default App;

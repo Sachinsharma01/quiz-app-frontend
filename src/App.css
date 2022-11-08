@@ -1,49 +1,84 @@
 @import "./constants.css";
+
 body {
-    background: var(--bg-primary);
-    overflow: hidden;
+	background: var(--bg-primary);
+	overflow: hidden;
 }
+
 .navbar {
-    background: var(--header-background);
-    height: 90px;
+	background: var(--header-background);
+	height: 90px;
 }
+
 .navbar h2 {
-    font-weight: bolder;
-    font-size: xx-large;
+	font-weight: bolder;
+	font-size: xx-large;
 }
+
 .login-btn, .signup-btn, .logout-btn {
-    background: var(--button-background);
-    border: none;
-    font-weight: bold;
-    transition: transform ease-in .3s;
+	background: var(--button-background);
+	border: none;
+	font-weight: bold;
+	transition: transform ease-in .3s;
 }
+.login-btn:active, .signup-btn:active, .logout-btn:active {
+	background: #E58CC9FF !important;
+}
+
 .login-btn:hover, .signup-btn:hover, .logout-btn:hover {
-    background: var(--button-background);
-    transform: scale(1.2);
+	background: var(--button-background);
+	transform: scale(1.2);
 }
+
 .header_side-dropdown {
-    width: 170px;
-    height: 200px;
-    background: var(--header-background);
-    font-weight: bold;
-    animation: appear .7s ease-in;
+	width: 170px;
+	height: 200px;
+	background: var(--header-background);
+	font-weight: bold;
+	animation: appear .7s ease-in;
+	z-index: 99999;
+	right: 0;
 }
+
 .header_profile {
-    border-color: var(--border-color) !important;
+	border-color: var(--border-color) !important;
 }
+
+.login-container,
+.signup-container {
+	height: 100vh;
+}
+
+.login-container .login-wrapper,
+.signup-container .signup-wrapper {
+	height: 350px;
+	background: var(--card-background);
+	min-width: 300px !important;
+}
+
+.login-container .login-wrapper input,
+.signup-container .signup-wrapper input {
+	font-weight: bold;
+}
+.login-container .login-wrapper input:focus,
+.signup-container .signup-wrapper input:focus {
+	outline: var(--input-border) !important;
+	border: none;
+}
+
 
 /*--------------------- Animations -------------------*/
 @keyframes appear {
-    0% {
-        opacity: 0;
-        transform: translateY(-.5rem);
-    }
-    80% {
-        opacity: 0.5;
-        transform: translateY(-.3rem);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0rem);
-    }
+	0% {
+		opacity: 0;
+		transform: translateY(-.5rem);
+	}
+	80% {
+		opacity: 0.5;
+		transform: translateY(-.3rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0rem);
+	}
 }

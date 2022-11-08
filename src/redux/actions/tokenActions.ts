@@ -5,12 +5,14 @@ const updateToken = (token:any) => {
     return  {
         type: UPDATE_TOKEN,
         token: token,
+        isLoggedIn: true
     }
 }
 const removeToken = () => {
     return {
         type: REMOVE_TOKEN,
         token: '',
+        isLoggedIn: false
     }
 }
 

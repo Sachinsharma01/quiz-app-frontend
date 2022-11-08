@@ -1,6 +1,5 @@
 import React from "react";
 import avatar from "../../../assets/user.png";
-import { Link } from "react-router-dom";
 
 const Avatar = ({onClick}:any) => {
   return (

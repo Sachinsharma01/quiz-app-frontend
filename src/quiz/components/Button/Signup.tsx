@@ -1,9 +1,9 @@
 import React from "react";
 
-const Signup = () => {
+const Signup = (props:any) => {
     return (
         <>
-            <button className="btn btn-primary signup-btn">
+            <button className={`btn btn-primary signup-btn ${props.className}`} onClick={props.onClick}>
                 SIGN UP
             </button>
         </>

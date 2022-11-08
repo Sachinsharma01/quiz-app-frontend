@@ -4,7 +4,7 @@ const ProfileCard = ({userData}:any) => {
     return (
         <div className='profile-container d-flex justify-content-center align-items-center w-100 '>
             <div className='profile-wrapper container-fluid w-50 h-50 card rounded-3 container-lg'>
-                <h2 className='text-center text-light mt-3'>Profile Details</h2>
+                <h2 className='text-center text-light mt-3 border-bottom'>{userData.username}'s Profile Details</h2>
                 <div
                     className='profile-details mt-4 mx-4 w-75 d-flex flex-wrap justify-content-center align-items-center'>
                     <div className='w-50 h-100 text-light text-start'>

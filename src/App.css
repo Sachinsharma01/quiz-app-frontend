@@ -21,6 +21,7 @@ body {
 	font-weight: bold;
 	transition: transform ease-in .3s;
 }
+
 .login-btn:active, .signup-btn:active, .logout-btn:active {
 	background: #E58CC9FF !important;
 }
@@ -60,12 +61,24 @@ body {
 .signup-container .signup-wrapper input {
 	font-weight: bold;
 }
+
 .login-container .login-wrapper input:focus,
 .signup-container .signup-wrapper input:focus {
 	outline: var(--input-border) !important;
 	border: none;
 }
 
+.profile-container {
+	height: 80vh;
+}
+
+.profile-wrapper {
+	background: var(--card-background);
+	min-width: 270px;
+}
+.profile-details {
+
+}
 
 /*--------------------- Animations -------------------*/
 @keyframes appear {

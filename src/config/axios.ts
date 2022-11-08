@@ -3,8 +3,12 @@ import axios from "axios";
 const request = async (body: any) => {
     let response: any = {};
     if (body.method === 'POST') {
-        response = await axios.post(body.url, {
-            ...body.data
+        response = await axios(body.url, {
+            data: {...body.data},
+            method: body.method,
+            headers: {
+                authorization: body.headers.authorization,
+            }
         })
         return response;
     }

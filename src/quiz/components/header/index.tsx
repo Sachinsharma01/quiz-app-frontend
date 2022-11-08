@@ -10,7 +10,7 @@ const Header = () => {
     console.log(isLoggedIn)
     return (
         <>
-            <nav className="navbar navbar-expand-lg">
+            <nav className="navbar container-fluid navbar-expand-lg w-100">
                 <div className="container-fluid my-3 mx-5">
                     <h2 className="text-light ">QUIZZEZ</h2>
                     <div className="d-flex justify-content-center align-items-center mx-2">

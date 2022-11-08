@@ -1,21 +1,31 @@
-import {Provider} from "react-redux";
-import store from "../redux/store";
-import Header from "./components/header";
-import {Route, Switch} from "react-router-dom";
-import Profile from "./pages/profile";
 import React from "react";
+import {Redirect, Route, Switch} from "react-router-dom";
+import Header from "./components/header";
+import Profile from "./pages/profile";
+import Login from "./pages/Login";
+import Signup from "./pages/signup";
+import {useSelector} from "react-redux";
+
 
 function Main() {
+    const {isLoggedIn} = useSelector((state: any) => state.tokenReducer)
     return (
         <>
-            <Provider store={store}>
-                <Header/>
-                <Switch>
-                    <Route path="/user/profile" exact>
-                        <Profile/>
-                    </Route>
-                </Switch>
-            </Provider>
+            <Header/>
+            <Switch>
+                <Route path="/user/profile" exact>
+                    {isLoggedIn ? <Profile/> : <Redirect to='/login'/>}
+                </Route>
+                <Route path="/login">
+                    {isLoggedIn ? <Redirect to='/user/profile'/> : <Login/>}
+                </Route>
+                <Route path="/signup">
+                    {isLoggedIn ? <Redirect to='/user/profile'/> : <Signup/>}
+                </Route>
+                <Route path='*' exact>
+                    {isLoggedIn ? <Redirect to='/user/profile'/> : <Redirect to='/login'/>}
+                </Route>
+            </Switch>
         </>
     )
 }

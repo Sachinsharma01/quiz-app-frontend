@@ -1,9 +1,8 @@
 import React from "react";
-const Login = () => {
-    const logInHandler = () => {};
+const Login = (props:any) => {
     return (
         <>
-            <button className="btn btn-primary login-btn" onClick={logInHandler}>LOG IN</button>
+            <button type="submit" className={`btn btn-primary login-btn ${props.className}`} onClick={props.onClick}>LOG IN</button>
         </>
     );
 };

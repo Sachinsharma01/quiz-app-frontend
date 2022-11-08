@@ -1,15 +1,15 @@
 import axios from "axios";
 
-const request = async (body:any) => {
-    const config:any = {
-        method: body.method,
-        headers: body.headers,
-    }
+const request = async (body: any) => {
+    let response: any = {};
     if (body.method === 'POST') {
-        config["data"] = body.data;
+        response = await axios.post(body.url, {
+            ...body.data
+        })
+        return response;
     }
-    const response = await axios(body.url, config)
+    response = await axios.get(body.url)
     return response;
 }
 
-export { request as ProcessRest };
+export default request;
